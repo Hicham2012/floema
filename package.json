@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack -p --progress --config webpack.config.build.js",
-    "development": "webpack-dev-server --progress --config webpack.config.development.js",
+    "development": "webpack serve --progress --config webpack.config.development.js",
     "start": "npm run development"
   },
   "author": "Hicham Zaadla",
   "devDependencies": {
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.2",
-    "webpack-merge": "^5.10.0"
+    "clean-webpack-plugin": "^4.0.0-alpha.o",
+    "copy-webpack-plugin": "^8.1.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
