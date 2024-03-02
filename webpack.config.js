@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
@@ -17,7 +18,7 @@ module.exports = {
         path.join(dirApp, 'index.js'),
         path.join(dirStyles, 'index.scss')
     ],
-    
+
     resolve: {
         modules: [
             dirApp,
@@ -59,6 +60,7 @@ module.exports = {
               },
             },
           }),
+            new CleanWebpackPlugin()
     ],
 
     module: {
@@ -97,7 +99,7 @@ module.exports = {
                     name(file) {
                         return '[hash].[ext]'
                     }
-                }               
+                }
             },
             {
                 test: /\.(jpe?g|png|gif|svg|webp)$/i,
@@ -131,5 +133,9 @@ module.exports = {
                 exclude: /node_modules/
               }
         ]
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [new TerserPlugin()]
     }
 }
