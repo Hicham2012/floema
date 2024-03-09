@@ -2,9 +2,11 @@
   "name": "floema",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --progress --config webpack.config.build.js",
-    "development": "webpack serve --progress --config webpack.config.development.js",
-    "start": "npm run development"
+    "backend:build": "node app.js",
+    "backend:development": "nodemon app.js",
+    "frontend:build": "webpack --progress --config webpack.config.build.js",
+    "frontend:development": "webpack serve --progress --config webpack.config.development.js",
+    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\""
   },
   "author": "Hicham Zaadla",
   "devDependencies": {
@@ -33,9 +35,15 @@
     "raw-loader": "^4.0.2",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0",
+    "pug": "^3.0.2"
   }
 }

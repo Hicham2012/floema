@@ -136,6 +136,15 @@ module.exports = {
     },
     optimization: {
       minimize: true,
-      minimizer: [new TerserPlugin()]
+      minimizer: [
+        (compiler) => {
+          const TerserPlugin = require('terser-webpack-plugin');
+          new TerserPlugin({
+            terserOptions: {
+              compress: {},
+            }
+          }).apply(compiler);
+        },
+      ]
     }
 }
