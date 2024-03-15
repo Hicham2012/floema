@@ -9,16 +9,16 @@ html(lang="en")
     //- base(href="/")
 
     //-  Primary Meta Tags -//
-    title Floema
-    //- meta(name="title", content=meta.data.title)
-    //- meta(name="description", content=meta.data.description)
+    title #{metadata.data.title}
+    meta(name="title", content=metadata.data.title)
+    meta(name="description", content=metadata.data.description)
 
     //-  Open Graph / Facebook -//
     meta(property="og:type" content="website")
     meta(property="og:url" content="https://metatags.io/")
-    //- meta(property="og:title" content=meta.data.title)
-    //- meta(property="og:description" content=meta.data.description)
-    meta(property="og:image" content="https://metatags.io/images/meta-tags.png")
+    meta(property="og:title" content=metadata.data.title)
+    meta(property="og:description" content=metadata.data.description)
+    meta(property="og:image" content=metadata.data.image)
 
     //- Twitter -//
     meta(property="twitter:card" content="summary_large_image")
