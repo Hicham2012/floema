@@ -1,0 +1,28 @@
+extends ../template
+
+block variables
+  - var template = 'collections'
+
+block content
+  .collections
+    .collections__wrapper
+      .collection__titles
+        each collection, index in collections
+          .collection__titles__label= `${home.data.collection} ${Number(index)}`
+
+          .collection__titles__title=collection.data.title
+
+      .collections__gallery
+        .collections__gallery__wrapper
+          each collection in collections
+            each product in collection.data.products
+              a.collections__gallery__link(href=Link(product.products_product))
+                figure.collections__gallery__media
+                  img.collections__gallery__media__image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
+
+      .collections__content
+        each collection in collections
+          article.collections__article
+            h2.collections__article__title=`${collection.data.title} ${home.data.collection}`
+
+            p.collections__article__description=collection.data.description
