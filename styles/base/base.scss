@@ -1,10 +1,11 @@
 // @use 'variables';
+html {
+  font-size: calc(100vw / 1920 * 10);
+}
+
 body {
   @extend %description-16;
   font-family: $font-suisse-bp;
   // font-weight: 300;
 
-  @include media('<tablet') {
-    font-size: 100rem;
-  }
 }

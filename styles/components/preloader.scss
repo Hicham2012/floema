@@ -1,12 +1,27 @@
 .preloader {
+  @extend %cover;
 
+  background-color: $color-contessa;
+  color: $color-white;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center
 }
 
 .preload__text {
+  @extend %title-53;
 
+  max-width: 73rem;
 }
 
 .preload__number {
+  @extend %description-14;
 
+  bottom: 5.1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
