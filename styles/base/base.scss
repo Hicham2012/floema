@@ -1,4 +1,10 @@
 // @use 'variables';
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: calc(100vw / 1920 * 10);
 }
@@ -8,4 +14,10 @@ body {
   font-family: $font-suisse-bp;
   // font-weight: 300;
 
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
 }
