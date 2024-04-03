@@ -8,7 +8,7 @@ block content
     .collections__wrapper
       .collection__titles
         each collection, index in collections
-          .collection__titles__label= `${home.data.collection} ${Number(index)}`
+          .collection__titles__label!= `${home.data.collection} <br> ${Number(index)}`
 
           .collection__titles__title=collection.data.title
 
@@ -21,8 +21,8 @@ block content
                   img.collections__gallery__media__image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
 
       .collections__content
-        each collection in collections
-          article.collections__article
+        each collection, index in collections
+          article.collections__article(class=`${index === 0 ? 'collections__article--active' : ''}`)
             h2.collections__article__title=`${collection.data.title} ${home.data.collection}`
 
             p.collections__article__description=collection.data.description
