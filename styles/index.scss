@@ -1,15 +1,21 @@
+@import './base/reset.scss';
+
 @import './utils/variables.scss';
 @import './utils/functions.scss';
 @import './utils/mixins.scss';
 @import './utils/vendors.scss';
 @import './utils/responsive.scss';
 
-@import './shared/titles.scss';
 @import './shared/descriptions.scss';
+@import './shared/titles.scss';
+@import './shared/vertical-titles.scss';
 
-@import './base/fonts';
-@import './base/reset.scss';
+@import './base/fonts.scss';
 @import './base/base.scss';
+
+@import './components/preloader.scss';
+
+@import './layout/navigation.scss';
 
 @import './pages/about/about.scss';
 @import './pages/about/content.scss';
