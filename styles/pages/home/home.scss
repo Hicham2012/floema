@@ -1,5 +1,29 @@
 .home {
+  @extend %center;
+  @extend %cover;
 
+  overflow: hidden;
+  background-color: $color-contessa;
+  color: $color-white;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '';
+    height: 24rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  &::before {
+    background: linear-gradient(to bottom, $color-contessa 0%,rgba($color-contessa, 0) 100%);
+    top: 0;
+  }
+  &::after {
+    background: linear-gradient(to top, $color-contessa 0%,rgba($color-contessa, 0) 100%);
+    bottom: 0;
+  }
 }
 
 .home__wrapper {
@@ -7,34 +31,58 @@
 }
 
 .home__titles {
-
+  @extend %vertical__titles;
 }
 
 .home__titles__label {
-
+  @extend %vertical__titles__label;
 }
 
 .home__titles__title {
-
+  @extend %vertical__titles__title;
 }
 
 .home__gallery {
+  @extend %cover;
 
+  visibility: hidden;
 }
 
 .home__gallery__wrapper {
-
+  position: absolute;
 }
 
 .home__gallery__media {
-
 }
 
 .home__gallery__media__image {
+  max-width: 43rem;
 
 }
 
 .home__link {
+  @extend %description-14;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6rem;
+  width: 28.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  z-index: 2;
+
+  @include media('<phone') {
+    width: 55rem;
+    height: 13.7rem;
+  }
+}
+
+.home__link__icon {
+  @extend %cover;
 }
 

@@ -4,7 +4,9 @@
 
   display: none;
   background-color: $color-contessa;
+  text-align: center;
   color: $color-white;
+  z-index: z('preloader');
 }
 
 .preload__text {
@@ -20,5 +22,9 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+
+  @include media('<phone') {
+    font-size: 2.5rem;
+  }
 }
 

@@ -1,16 +1,38 @@
 .about__gallery {
-  display: none;
+  // display: none;
+  height: 58.6rem;
+  position: relative;
+  margin: 20rem 0;
+
+  overflow-x: hidden;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .about__gallery__wrapper {
-
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .about__gallery__media {
-
+  position: relative;
+  width: 30.9rem;
+  height: 43.7rem;
+  margin: 0 4rem;
 }
 
 .about__media__gallery__image {
+  @extend %cover;
 
+  object-fit: cover;
 }
 

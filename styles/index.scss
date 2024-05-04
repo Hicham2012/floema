@@ -8,11 +8,14 @@
 
 @import './shared/descriptions.scss';
 @import './shared/titles.scss';
+@import './shared/vertical-titles.scss';
 
 @import './base/fonts.scss';
 @import './base/base.scss';
 
 @import './components/preloader.scss';
+
+@import './layout/navigation.scss';
 
 @import './pages/about/about.scss';
 @import './pages/about/content.scss';

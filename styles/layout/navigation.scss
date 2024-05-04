@@ -1,17 +1,30 @@
 .navigation {
+  @extend %cover;
 
-}
-
-.navigation__wrapper {
-
+  color: $color-quarter-spanish-white;
+  z-index: z('navigation');
 }
 
 .navigation__link {
+  font-size: 0;
+  position: absolute;
+  left: 4rem;
+  top: 4.7rem;
+  width: 12.8rem;
+  height: 1.85rem;
+
 
 }
 
 .navigation__link__icon {
+  display: block;
+  width: 12.8rem;
+  height: 1.85rem;
 
+  @include media('<phone') {
+    width: 27.9rem;
+    height: 4.35rem;
+  }
 }
 
 .navigation__list {
@@ -19,10 +32,12 @@
 }
 
 .navigation__list__item {
-
+  position: absolute;
+  right: 4rem;
+  top: 3.7rem;
 }
 
 .navigation__list__link {
-
+  @extend %title-20;
 }
 

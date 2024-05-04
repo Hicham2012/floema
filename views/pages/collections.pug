@@ -26,3 +26,10 @@ block content
             h2.collections__article__title=`${collection.data.title} ${home.data.collection}`
 
             p.collections__article__description=collection.data.description
+
+      .collection__mobile
+        each collection, index in collections
+          .collection__mobile__item
+            .collection__mobile__item__label!= `${home.data.collection} <br> ${Number(index)}`
+
+            .collection__mobile__item__title=collection.data.title
